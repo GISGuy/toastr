@@ -313,7 +313,9 @@
                 function setIcon() {
                     if (map.iconClass) {
                         $toastElement.addClass(options.toastClass).addClass(iconClass);
-                        console.log(options.backgroundColor);
+						if (options.debug && console) {
+							console.log(options.backgroundColor);
+						}
                         if (options.backgroundColor) $toastElement.css("background-color", options.backgroundColor);
                     }
                 }
